@@ -1,0 +1,55 @@
+﻿<h1>
+    Hello {{name + getMethod() }}
+    <br /> {{40*3}}
+    <br />
+
+</h1>
+<img src="{{ImagePath}}" />
+<!--Property binding- It uses [] square bracket for property names of elements, it will be usefull for non-string property values like Boolean-->
+
+<img [src]="ImagePath" />
+<button [disabled]="isDisabled">Button1</button>
+<button disabled="{{isDisabled}}">Button2</button> <!--using interpolation in Boolean properties will cause the prperty disabled always irrespective of true or false-->
+<input id="TESTIP" value="TEST" type="text" />
+
+<br /><br />
+<button class="colorClass">class="colorClass"</button>
+<button class="classesToApply">class="classesToApply"</button>
+<button class='colorClass' [class.boldClass]='applyBoldClass'>class='colorClass' [class.boldClass]='applyBoldClass'</button>
+<button class='colorClass' [class.boldClass]='!applyBoldClass'>class='colorClass' [class.boldClass]='!applyBoldClass'</button>
+<button class='colorClass boldClass italicsClass' [class.boldClass]='applyBoldClass'>class='colorClass boldClass italicsClass' [class.boldClass]='applyBoldClass'</button>
+<button class='colorClass' [ngClass]='addClasses()'>Using ngClass Directive --- class='colorClass' [ngClass]='addClasses()'</button>
+
+
+<br /><br />
+<button style='color:red'
+        [style.font-weight]="isBold ? 'bold' : 'normal'">
+    style='color:red'
+    [style.font-weight]="isBold ? 'bold' : 'normal'"
+</button>
+<button style='color:red'
+        [style.font-size.px]="fontSize">
+    style='color:red'
+    [style.font-size.px]="fontSize"
+</button>
+<button style='color:red' [ngStyle]="addStyles()">style='color:red' [ngStyle]="addStyles()"</button>
+
+
+<br /><br />
+    Name : <input [value]='TexboxVal'>
+<br>
+    You entered : {{TexboxVal}}
+<br />
+    Name : <input [value]='TexboxVal' (input)='TexboxVal = $event.target.value'>
+<br>
+    You entered : {{TexboxVal}}
+<br />
+    Name : <input [(ngModel)]='TexboxVal'>
+<br>
+    You entered : {{TexboxVal}}
+<br />
+<my-employee>
+
+</my-employee>
+
+<list-employee></list-employee>
