@@ -7,11 +7,12 @@ import { FormsModule } from "@angular/forms"
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from "./employee/employee.component";
 import { EmployeeListComponent } from "./employee/employeeList.component";
-import { EmployeeTitlePipe } from "./employee/employeeTitle.pipe"
+import { EmployeeTitlePipe } from "./employee/employeeTitle.pipe";
+import { EmployeeCountComponent } from "./employee/employeeCount.component"
 
 @NgModule({//NgModule - @component decorator adds metadata to an angular component class, similarly @NgModule decorator adds metadata to the angular module class.
     imports: [BrowserModule, FormsModule],
-    declarations: [AppComponent, EmployeeComponent, EmployeeListComponent, EmployeeTitlePipe],
+    declarations: [AppComponent, EmployeeComponent, EmployeeListComponent, EmployeeTitlePipe, EmployeeCountComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
