@@ -23,4 +23,5 @@ EmployeeTitlePipe = __decorate([
     })
 ], EmployeeTitlePipe);
 exports.EmployeeTitlePipe = EmployeeTitlePipe;
+//Custom Angular Pipe 
 //# sourceMappingURL=employeeTitle.pipe.js.map

@@ -35,6 +35,8 @@ var AppComponent = (function () {
         //3. Also, include FormsModule in the 'imports' array of @NgModule
         //imports: [BrowserModule, FormsModule]
         //Angular structural directive - ngIf,ngFor
+        //Simple Component Life cycle Hook changes
+        this.SimpleComponetTextbox = "Simple";
     }
     AppComponent.prototype.getMethod = function () {
         return this.name + " Method call";

@@ -53,3 +53,39 @@
 </my-employee>
 
 <list-employee></list-employee>
+
+<br />
+<br />
+Simple componet and and its Life cycle hooks in Angular<br />
+Simple Component Life cycle Hook Test : <input type='text' [(ngModel)]='SimpleComponetTextbox' />
+<br /><br />
+<simple [simpleInput]='SimpleComponetTextbox'></simple>
+
+<table class="table table-bordered " >
+    <tr><td>Col</td></tr>
+    <tr><td>Col</td></tr>
+</table>
+<br /><br />
+
+Demonstration of Routing feature in Angular<br />
+<!--The routerLink directive tells the router where to navigate when the user clicks the link.
+The routerLinkActive directive is used to add the active bootstrap class to the HTML navigation element whose route matches the active route.
+The router-outlet directive is used to specify the location where we want the routed component's view template to be displayed.
+The routerLink, routerLinkActive and router-outlet directives are provided by the RouterModule which we have imported in our application root module.
+If you forget to specify the router-outlet directive, you will get and error stating - cannot find primary outlet to load component.-->
+<br />
+<!--<div style="padding:5px">
+    <ul class="nav nav-tabs">
+        <li routerLinkActive="active">
+            <a routerLink="home">Home</a>
+        </li>
+        <li routerLinkActive="active">
+            <a routerLink="employees">Employees</a>
+        </li>
+    </ul>
+    <br />
+    <router-outlet></router-outlet>
+</div>-->
+<!--Finally in web.config file of our angular application include the following url-rewrite rule to tell IIS
+     how to handle routes. The match url, <match url=".*" />, will rewrite every request.
+     The URL in <action type="Rewrite" url="/src/" /> should match the base href in index.html.--> 

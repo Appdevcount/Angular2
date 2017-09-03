@@ -81,4 +81,7 @@ export class AppComponent
     //imports: [BrowserModule, FormsModule]
 
     //Angular structural directive - ngIf,ngFor
+
+    //Simple Component Life cycle Hook changes
+    SimpleComponetTextbox: string = "Simple";
 }

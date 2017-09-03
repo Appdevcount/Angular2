@@ -1,0 +1,19 @@
+﻿Package Installation
+=====================
+PS C:\Users\Siraj\Documents\visual studio 2015\Projects\Angular2\Angular2> npm install bootstrap@3 jquery --save
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any
+"} (current: {"os":"win32","arch":"x64"})
+
++ jquery@3.2.1
++ bootstrap@3.3.7
+added 117 packages in 23.269s
+PS C:\Users\Siraj\Documents\visual studio 2015\Projects\Angular2\Angular2>
+
+After installing above package using npm, need to enable intellisense for installed packages explicitly by including respective folder to project from node modules
+This package can also be installed using Nuget, which doesnt require anything to enable intellisense explicitly
+
+
+
+
+

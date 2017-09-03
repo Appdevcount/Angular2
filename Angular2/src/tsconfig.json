@@ -1,5 +1,6 @@
 {
   //"compileOnSave": true,
+  
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
@@ -10,5 +11,8 @@
     "lib": [ "es2015", "dom" ],
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true
+
+    //"noStrictGenericChecks": true //Added by me
+
   }
 }

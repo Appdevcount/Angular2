@@ -11,3 +11,5 @@ export class EmployeeTitlePipe implements PipeTransform {
             return "Miss." + value;
     }
 }
+
+//Custom Angular Pipe
