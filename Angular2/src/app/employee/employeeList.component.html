@@ -1,5 +1,5 @@
 ﻿<br /><br />
-<employee-count  *ngIf="employees"  [all]="getTotalEmployeesCount()"
+<employee-count *ngIf="employees" [all]="getTotalEmployeesCount()"
                 [male]="getMaleEmployeesCount()"
                 [female]="getFemaleEmployeesCount()"
                 (countRadioButtonSelectionChanged)="onEmployeeCountRadioButtonChange($event)">
@@ -35,7 +35,11 @@
                     Use only one attribute named 'template' or prefixed with *.-->
             <tr *ngIf="selectedEmployeeCountRadioButton=='All' ||
                        selectedEmployeeCountRadioButton==employee.gender">
-                <td>{{employee.code}}</td>
+                <td>
+                    <a [routerLink]="['/employees',employee.code]">
+                        {{employee.code | uppercase}}
+                    </a>
+                </td>
                 <td>{{employee.name | employeeTitle:employee.gender}}</td> <!--Using Custom Angular Pipes-->
                 <td>{{employee.gender}}</td>
                 <td>{{employee.annualSalary |  currency:'USD':true:'1.3-3'}}</td>
@@ -48,8 +52,8 @@
             </tr>
         </ng-container>
         <!--If the web service takes time to return data, the message in this <tr>
-    is displayed. When the service call returns this message disappears
-    and the employees data is displayed-->
+        is displayed. When the service call returns this message disappears
+        and the employees data is displayed-->
         <tr *ngIf="!employees">
             <td colspan="5">
                 {{statusMessage}} <!--Loading data. Please wait...-->

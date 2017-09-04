@@ -74,7 +74,7 @@ The router-outlet directive is used to specify the location where we want the ro
 The routerLink, routerLinkActive and router-outlet directives are provided by the RouterModule which we have imported in our application root module.
 If you forget to specify the router-outlet directive, you will get and error stating - cannot find primary outlet to load component.-->
 <br />
-<!--<div style="padding:5px">
+<div style="padding:5px">
     <ul class="nav nav-tabs">
         <li routerLinkActive="active">
             <a routerLink="home">Home</a>
@@ -85,7 +85,7 @@ If you forget to specify the router-outlet directive, you will get and error sta
     </ul>
     <br />
     <router-outlet></router-outlet>
-</div>-->
+</div>
 <!--Finally in web.config file of our angular application include the following url-rewrite rule to tell IIS
      how to handle routes. The match url, <match url=".*" />, will rewrite every request.
      The URL in <action type="Rewrite" url="/src/" /> should match the base href in index.html.--> 

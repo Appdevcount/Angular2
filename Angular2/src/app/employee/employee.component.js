@@ -5,23 +5,35 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+var employee_service_1 = require("./employee.service");
 var EmployeeComponent = (function () {
-    function EmployeeComponent() {
-        this.firstName = 'Tom';
-        this.lastName = 'Hopkins';
-        this.gender = 'Male';
-        this.age = 20;
-        // Class Binding in Angular
-        this.columnSpan = 4;
-        this.showDetails = false;
+    function EmployeeComponent(_employeeService, _activatedRoute) {
+        this._employeeService = _employeeService;
+        this._activatedRoute = _activatedRoute;
+        this.statusMessage = 'Loading data. Please wait...';
     }
-    //Event Binding in Angular - Just like WEBFORM - Flow data from an HTML element to a Angular component Class
-    EmployeeComponent.prototype.onClick = function () {
-        console.log('Button Clicked');
-    };
-    EmployeeComponent.prototype.toggleDetails = function () {
-        this.showDetails = !this.showDetails;
+    EmployeeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var empCode = this._activatedRoute.snapshot.params['code'];
+        this._employeeService.getEmployeeByCode(empCode)
+            .subscribe(function (employeeData) {
+            if (employeeData == null) {
+                _this.statusMessage =
+                    'Employee with the specified Employee Code does not exist';
+            }
+            else {
+                _this.employee = employeeData;
+            }
+        }, function (error) {
+            _this.statusMessage =
+                'Problem with the service. Please try again after sometime';
+            console.error(error);
+        });
     };
     return EmployeeComponent;
 }());
@@ -30,8 +42,11 @@ EmployeeComponent = __decorate([
         selector: "my-employee",
         templateUrl: "app/employee/employee.component.html",
         //styles: ['table { color: #369; font-family: Arial, Helvetica, sans-serif; font-size: small; border-collapse: collapse;}', 'td {border: 1px solid black; }'],
-        styleUrls: ['app/employee/employee.component.css']
-    })
+        styleUrls: ['app/employee/employee.component.css'],
+        providers: [employee_service_1.EmployeeService]
+    }),
+    __metadata("design:paramtypes", [employee_service_1.EmployeeService,
+        router_1.ActivatedRoute])
 ], EmployeeComponent);
 exports.EmployeeComponent = EmployeeComponent;
 //# sourceMappingURL=employee.component.js.map

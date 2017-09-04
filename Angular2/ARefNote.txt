@@ -1,4 +1,24 @@
-﻿Package Installation
+﻿Restoring Packagaes in Project from packages.json 
+====Executing command 'npm install'====
+
+npm WARN deprecated minimatch@0.3.0: Please update to minimatch 3.0.2 or higher to avoid a RegExp DoS issue
+npm WARN deprecated express@2.5.11: express 2.x series is deprecated
+npm WARN deprecated connect@1.9.2: connect 1.x series is deprecated
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.2 (node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+added 583 packages in 91.317s
+
+
+====npm command completed with exit code 0====
+
+Runnin the app from command prompt using command - npm start
+Nodejs will compile[tsc] the typescript and build to run the app using the lite server with  port - http://localhost:3000/
+Also the liteserver will watch for any changes and reserve the request automatically
+Tested it from app.component.ts , where I changed the text from Angular to Angular2
+
+
+Package Installation
 =====================
 PS C:\Users\Siraj\Documents\visual studio 2015\Projects\Angular2\Angular2> npm install bootstrap@3 jquery --save
 npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.1.2 (node_modules\fsevents):

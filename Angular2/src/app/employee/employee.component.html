@@ -1,6 +1,6 @@
 ﻿<!--Attribute Binding - Interpolation and property binding[] won't change the attribute values , so we need to use Attribute binding[attr.colspan] for that --->
 
-<table class="table table-bordered table-responsive">
+<table  *ngIf="employee" class="table table-bordered table-responsive">
     <thead>
         <tr>
             <!--            <th colspan="2">-->
@@ -11,27 +11,37 @@
         </tr>
     </thead>
     <tbody>
+    
         <tr>
             <td>First Name</td>
-            <td>{{firstName}}</td>
+            <!--<td>{{firstName}}</td>-->
+            <td>{{employee.code}}</td>
         </tr>
         <tr>
             <td>Last Name</td>
-            <td>{{lastName}}</td>
+            <!--<td>{{lastName}}</td>-->
+            <td>{{employee.name}}</td>
         </tr>
-        <tr *ngIf='showDetails'>
+        <!--<tr *ngIf='showDetails'>
+        --><tr >
             <td>Gender</td>
-            <td>{{gender}}</td>
+            <!--<td>{{gender}}</td>-->
+               <td>{{employee.gender}}</td>
         </tr>
-        <tr *ngIf='showDetails'>
+        <!--<tr *ngIf='showDetails'>
+        --><tr >
             <td>Age</td>
-            <td>{{age}}</td>
+            <!--<td>{{age}}</td>-->
+               <td>{{employee.annualSalary}}</td>
         </tr>
     </tbody>
 </table>
+<div *ngIf="!employee">
+    {{statusMessage}}
+</div>
 <br />
-<button (click)='onClick()'>Click me - (click)='onClick()' in Event Binding</button>
+<!--<button (click)='onClick()'>Click me - (click)='onClick()' in Event Binding</button>
 <br />
 <button (click)='toggleDetails()'>
     {{showDetails ? 'Hide' : 'Show'}} Details - (click)='toggleDetails()'
-</button>
+</button>-->
